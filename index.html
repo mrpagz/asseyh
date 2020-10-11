@@ -3,38 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- This is the first step in making the document responsive but scaling the items to screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- This is the style links -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- This is the title-->
     <title>Code Quiz</title>
 </head>
 
 <body>
-    <!-- Link to highscores -->
     
-    <!-- This is a wrapper -->
     <div id="wrapper">
         <!-- Div for timer -->
-        <div id="currentTime"></div>
+        <div id="timer"></div>
         <!-- Div for quiz content -->
-        <div id="questionsDiv">
-            <h1>Coding Quiz Challenge</h1>
+        <div id="question">
+            <h1>Coding Quiz</h1>
             <p>Answer the following questions within 75 seconds. You will lose 10 seconds on every incorrect answer!</p>
-            <ul id="choicesUl"></ul>
+            <ul id="option-list"></ul>
             <!-- Buttons -->
             <button id="startTime">Start Quiz</button>
             <br><br><br><br><br>
+            <!-- Link to highscores -->
             <button class=highScore onclick="window.location.href='index2.html'">View Highscores</button>
         </div>
 
     </div>
 
-
+    <!-- reference highscore javascript -->
     <script src="ask.js"></script>
 
 

@@ -21,11 +21,11 @@
     font-size: 20px;
     color: white;
 }
-#questionsDiv {
+#question {
     margin: 20px;
 }
 
-#currentTime {
+#timer {
     float: right;
 }
 

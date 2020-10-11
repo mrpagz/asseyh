@@ -34,16 +34,16 @@ var questionIndex = 0;
 
 // Start working code 
 // Declared variables
-var currentTime = document.querySelector("#currentTime");
+var currentTime = document.querySelector("#timer");
 var timer = document.querySelector("#startTime");
-var questionsDiv = document.querySelector("#questionsDiv");
+var questionsDiv = document.querySelector("#question");
 var wrapper = document.querySelector("#wrapper");
 
-// Seconds left is 15 seconds per question:
+// Time duration in seconds for the whole quiz
 var secondsLeft = 76;
 // Holds interval time
 var holdInterval = 0;
-// Holds penalty time
+// Penalty for incorrect answer
 var penalty = 10;
 // Creates new element
 var ulCreate = document.createElement("ul");
@@ -101,7 +101,7 @@ function compare(event) {
             createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
             // Correct condition 
         } else {
-            // Will deduct -5 seconds off secondsLeft for wrong answers
+            // Will deduct -10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
