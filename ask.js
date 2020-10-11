@@ -37,7 +37,7 @@ var questionIndex = 0;
 var currentTime = document.querySelector("#timer");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#question");
-var wrapper = document.querySelector("#wrapper");
+var wrapper = document.querySelector("#container");
 
 // Time duration in seconds for the whole quiz
 var secondsLeft = 76;
