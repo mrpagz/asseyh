@@ -29,6 +29,10 @@
     float: right;
 }
 
+.hide {
+    display: none;
+}
+
 .goBack {
     background-color: blue;
     position: relative;
