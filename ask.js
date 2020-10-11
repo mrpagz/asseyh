@@ -155,7 +155,7 @@ function allDone() {
 
     questionsDiv.appendChild(createLabel);
 
-    // input
+    // input initials
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -163,7 +163,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    // submit
+    // submitting initials
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -194,7 +194,7 @@ function allDone() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Travels to final page
+            // Showing you score (another html)
             window.location.replace("index2.html");
         }
     });
