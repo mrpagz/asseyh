@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/cs/style.css">
+    <link rel="stylesheet" type="text/css" href="Assets/style.css">
 
     <title>Code Quiz</title>
 </head>
@@ -12,42 +12,23 @@
 <body>
 
     <div id="container">
-        <!-- Div for timer -->
         <div id="timer"></div>
-
-        <!-- Div for quiz content -->
-        <div id="startPage">
+        <div id="question">
             <h1>Coding Quiz</h1>
             <p>Answer the following questions within 75 seconds. You will lose 10 seconds on every incorrect answer!</p>
             <ul id="option-list"></ul>
-            <!-- Buttons -->
-            <button id="startQuiz">Start Quiz</button>
+            <button id="startTime">Start Quiz</button>
             <br><br><br><br><br>
             <!-- Link to highscores -->
-            <button id="highScore">View Highscores</button>
+            <button class=highScore onclick="window.location.href='index2.html'">View Highscores</button>
         </div>
-
-        <div id="questionPage" class="hide">
-
-            <h3 id="question">Display</h3>
-
-            <div id="answerList"></div>
-
-        </div>
-
-        <div id="resultsPage" class="hide">
-
-            <input type="text" id="initials">
-            <button id="getInitials">Submit</button>
-
-            <a href="index2.html" class="hide" id="redirect">HIDDEN</a>
-        </div>
-
 
     </div>
 
     <!-- reference highscore javascript -->
-    <script src="./assets/js/ask.js"></script>
+    <script src="ask.js"></script>
+
+
 
 </body>
 
