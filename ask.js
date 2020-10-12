@@ -36,9 +36,9 @@ var ulCreate = document.createElement("ul");
 
 var score = 0;
 var questionIndex = 0;
-var secondsLeft = 75;
+var secondsLeft = 25;
 var holdInterval = 0;
-var penalty = 10;
+var penalty = 3;
 
 
 
@@ -66,11 +66,12 @@ function render(questionIndex) {
     ulCreate.innerHTML = "";
     
     for (var i = 0; i < questions.length; i++) {
+        
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-        userChoices.forEach(function (newItem) {
+    userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionsDiv.appendChild(ulCreate);
@@ -94,7 +95,7 @@ function compare(event) {
         }
 
     }
-    
+    // Question Index determines number question user is on
     questionIndex++;
 
     if (questionIndex >= questions.length) {
@@ -106,25 +107,25 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 
 }
-/
+// All done will append last page
 function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-   
+    // Heading:
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
     questionsDiv.appendChild(createH1);
 
-    
+    // Paragraph
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
     questionsDiv.appendChild(createP);
 
-    
+    // Calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
@@ -134,14 +135,14 @@ function allDone() {
         questionsDiv.appendChild(createP2);
     }
 
-    
+    // Label
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(createLabel);
 
-   
+    // input initials
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -149,7 +150,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    
+    // submitting initials
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -157,7 +158,7 @@ function allDone() {
 
     questionsDiv.appendChild(createSubmit);
 
-    
+    // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
 
@@ -172,15 +173,15 @@ function allDone() {
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
-            
-        if (allScores === null) {
+            if (allScores === null) {
                 allScores = [];
-        } else {
+            } else {
                 allScores = JSON.parse(allScores);
             }
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
+            // Showing you score (another html)
             window.location.replace("index2.html");
         }
     });
