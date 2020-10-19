@@ -1,3 +1,3 @@
 # 04 Web APIs: Code Quiz
 
-I have created a coding quiz composed of 5 simple questions from the topics we covered. The user needs to answer the 5 question within 25 seconds and gets a point for correct answers and incorrect answers will take away 3 seconds of the time.The quiz will end if the time reaches zero and if all questions has been answered. The user needs to input intials and scores will be stored on the page. The user has an option to view scores of previous users prior to taking the quiz.
+I have created a coding quiz composed of 5 simple questions from the topics we covered. The user needs to answer the 5 question within 25 seconds and gets a point for correct answers and incorrect answers will take away 3 seconds of the time.The quiz will end if the time reaches zero and if all questions has been answered. User is prompted to put initials and can view highscores. 
